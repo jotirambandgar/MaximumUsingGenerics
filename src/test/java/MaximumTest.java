@@ -80,6 +80,42 @@ public class MaximumTest {
         Assert.assertEquals(third , result.intValue(),00.0f);
     }
 
+    @Test
+    public void whenGivenThreeString_shouldReturnMaximumString() {
+        String first = "Apple";
+        String second = "Peach";
+        String third = "Banana";
+        Maximum maximum = new Maximum();
+        String result = maximum.getHigherString(first, second, third);
+        Assert.assertEquals(second , result);
+    }
 
+    @Test
+    public void whenGivenMaximumStringAtFirstPosition_shouldReturnSameString() {
+        String first = "Peach";
+        String second = "Banana";
+        String third = "Apple";
+        Maximum maximum = new Maximum();
+        String result = maximum.getHigherString(first, second, third);
+        Assert.assertEquals(first, result);
+    }
+    @Test
+    public void whenGivenMaximumStringAtSecondPosition_shouldReturnSameString() {
+        String first = "Banana";
+        String second = "Peach";
+        String third = "Apple";
+        Maximum maximum = new Maximum();
+        String result = maximum.getHigherString(first, second, third);
+        Assert.assertEquals(second, result);
+    }
+    @Test
+    public void whenGivenMaximumStringAtThirdPosition_shouldReturnSameString() {
+        String first = "Banana";
+        String second = "Apple";
+        String third = "Peach";
+        Maximum maximum = new Maximum();
+        String result = maximum.getHigherString(first, second, third);
+        Assert.assertEquals(third , result);
+    }
 
 }

@@ -18,4 +18,19 @@ public class Maximum {
 
         return third;
     }
+
+    public String getHigherString(String first, String second, String third) {
+        System.out.println("first");
+        System.out.println(first.compareTo(second));
+        System.out.println(first.compareTo(third));
+        System.out.println("second");
+        System.out.println(second.compareTo(first));
+        System.out.println(second.compareTo(third));
+        if((first.compareTo(second)>0) && (first.compareTo(third)>0))
+            return first;
+        if((second.compareTo(first)>0) && (second.compareTo(third)>0))
+            return second;
+
+        return third;
+    }
 }
