@@ -8,9 +8,9 @@ public class MaximumTest {
         int first = 1;
         int second = 3;
         int third = 6;
-        Maximum maximum = new Maximum();
-        Integer result = maximum.getMaxNum(first, second, third);
-        Assert.assertEquals(third, result.intValue());
+        Maximum<Integer> maximum = new Maximum();
+        Integer result = maximum.getMaximum(first, second, third);
+        Assert.assertEquals(first, result.intValue());
     }
 
     @Test
@@ -18,8 +18,8 @@ public class MaximumTest {
         int first = 8;
         int second = 1;
         int third = 3;
-        Maximum maximum = new Maximum();
-        Integer result = maximum.getMaxNum(first, second, third);
+        Maximum<Integer> maximum = new Maximum();
+        Integer result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(first, result.intValue());
     }
     @Test
@@ -27,8 +27,8 @@ public class MaximumTest {
         int first = 8;
         int second = 10;
         int third = 3;
-        Maximum maximum = new Maximum();
-        Integer result = maximum.getMaxNum(first, second, third);
+        Maximum<Integer> maximum = new Maximum();
+        Integer result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(second, result.intValue());
     }
     @Test
@@ -36,8 +36,8 @@ public class MaximumTest {
         int first = 8;
         int second = 10;
         int third = 30;
-        Maximum maximum = new Maximum();
-        Integer result = maximum.getMaxNum(first, second, third);
+        Maximum<Integer> maximum = new Maximum();
+        Integer result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(third , result.intValue());
     }
 
@@ -46,8 +46,8 @@ public class MaximumTest {
         float first = 8.03f;
         float second = 10.00f;
         float third = 30.02f;
-        Maximum maximum = new Maximum();
-        Float result = maximum.getMaxFloatNum(first, second, third);
+        Maximum<Float> maximum = new Maximum();
+        Float result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(third , result.floatValue(),0.0f);
     }
 
@@ -56,8 +56,8 @@ public class MaximumTest {
         float first = 8.00f;
         float second = 1.00f;
         float third = 3.00f;
-        Maximum maximum = new Maximum();
-        Float result = maximum.getMaxFloatNum(first, second, third);
+        Maximum<Float> maximum = new Maximum();
+        Float result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(first, result.floatValue(),0.0f);
     }
     @Test
@@ -65,8 +65,8 @@ public class MaximumTest {
         float first = 8.00f;
         float second = 10.00f;
         float third = 3.00f;
-        Maximum maximum = new Maximum();
-        Float result = maximum.getMaxFloatNum(first, second, third);
+        Maximum<Float> maximum = new Maximum();
+        Float result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(second, result.floatValue(),0.0f);
     }
 
@@ -75,8 +75,8 @@ public class MaximumTest {
         float first = 8.00f;
         float second = 10.00f;
         float third = 30.00f;
-        Maximum maximum = new Maximum();
-        Float result = maximum.getMaxFloatNum(first, second, third);
+        Maximum<Float> maximum = new Maximum();
+        Float result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(third , result.intValue(),00.0f);
     }
 
@@ -85,8 +85,8 @@ public class MaximumTest {
         String first = "Apple";
         String second = "Peach";
         String third = "Banana";
-        Maximum maximum = new Maximum();
-        String result = maximum.getHigherString(first, second, third);
+        Maximum<String> maximum = new Maximum();
+        String result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(second , result);
     }
 
@@ -95,8 +95,8 @@ public class MaximumTest {
         String first = "Peach";
         String second = "Banana";
         String third = "Apple";
-        Maximum maximum = new Maximum();
-        String result = maximum.getHigherString(first, second, third);
+        Maximum<String> maximum = new Maximum();
+        String result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(first, result);
     }
     @Test
@@ -104,8 +104,8 @@ public class MaximumTest {
         String first = "Banana";
         String second = "Peach";
         String third = "Apple";
-        Maximum maximum = new Maximum();
-        String result = maximum.getHigherString(first, second, third);
+        Maximum<String> maximum = new Maximum();
+        String result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(second, result);
     }
     @Test
@@ -113,9 +113,14 @@ public class MaximumTest {
         String first = "Banana";
         String second = "Apple";
         String third = "Peach";
-        Maximum maximum = new Maximum();
-        String result = maximum.getHigherString(first, second, third);
+        Maximum<String> maximum = new Maximum();
+        String result = maximum.getMaximum(first, second, third);
         Assert.assertEquals(third , result);
     }
 
+
+//    @Test
+//    public void whenGivenThreeValuePassFromConstuctor_shouldReturnHigherValue() {
+//
+//    }
 }
