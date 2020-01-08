@@ -133,4 +133,11 @@ public class MaximumTest {
         String result = maximum.getMaximum();
         Assert.assertEquals("Peach" , result);
     }
+
+    @Test
+    public void whenGivenMultipleValue_shouldReturnHigherValue() {
+        Maximum<Integer> maximum = new Maximum();
+        Integer result = maximum.getMaximum(155,32,43,54,35,13);
+        Assert.assertEquals(13,result.intValue());
+    }
 }

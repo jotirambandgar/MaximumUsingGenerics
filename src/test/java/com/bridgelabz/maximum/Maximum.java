@@ -1,5 +1,8 @@
 package com.bridgelabz.maximum;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Maximum   <T extends Comparable> {
 
     private T first;
@@ -35,6 +38,11 @@ public class Maximum   <T extends Comparable> {
         if((this.second.compareTo(this.first)>0) && (this.second.compareTo(this.third)>0))
             return this.second;
         return this.third;
+    }
+
+    public T getMaximum(T... element) {
+        Arrays.sort(element);
+        return element[0];
     }
 
 
