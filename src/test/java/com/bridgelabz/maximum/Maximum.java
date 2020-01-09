@@ -20,7 +20,7 @@ public class Maximum   <T extends Comparable> {
 
     }
 
-    public T getMaximum(T first, T second, T third) {
+    public T getMaximumValue(T first, T second, T third) {
 
         if((first.compareTo(second)>0) && (first.compareTo(third)>0))
             return first;
@@ -31,7 +31,7 @@ public class Maximum   <T extends Comparable> {
     }
 
 
-    public T getMaximum() {
+    public T getMaximumValue() {
 
         if((this.first.compareTo(this.second)>0) && (this.first.compareTo(this.third)>0))
             return this.first;
@@ -40,10 +40,13 @@ public class Maximum   <T extends Comparable> {
         return this.third;
     }
 
-    public T getMaximum(T... element) {
+    public T getMaximumValue(T... element) {
         Arrays.sort(element);
+        printMaxValue(element[0]);
         return element[0];
     }
-
+    public void printMaxValue(T value) {
+        System.out.println("highest value---->"+value);
+    }
 
 }
